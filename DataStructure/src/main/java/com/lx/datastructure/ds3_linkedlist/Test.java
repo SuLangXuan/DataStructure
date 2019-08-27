@@ -24,6 +24,8 @@ public class Test {
         System.out.println("开始反转");
         linkedList.reserveLinkedList();
         linkedList.list();
+        System.out.println("反序打印");
+        linkedList.reversePrint();
 
     }
 }

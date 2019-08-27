@@ -1,5 +1,7 @@
 package com.lx.datastructure.ds3_linkedlist;
 
+import java.util.Stack;
+
 /**
  * 这是一个单向链表的实现
  */
@@ -45,6 +47,30 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         return temp;
+    }
+
+    //todo 从尾到头打印单链表 【百度，要求方式1：反向遍历 。 方式2：Stack栈】
+
+    /**
+     * 逆序打印单链表
+     */
+    public void reversePrint(){
+        //1.如果链表为空,直接返回
+        if (head.next == null){
+            System.out.println("链表为空");
+            return;
+        }
+        //todo 利用stack方式实现打印
+        Stack<Node> stack = new Stack<Node>();
+        Node temp = head.next;
+        while (temp != null){
+            stack.push(temp);
+            temp = temp.next;
+        }
+        while (stack.size()>0){
+            System.out.println(stack.pop());
+        }
+
     }
 
     //todo 单链表的反转【腾讯面试题，有点难度】
